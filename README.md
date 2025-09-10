@@ -1,6 +1,3 @@
-# DataStructures
-Repositorio de Estructura de Datos con implementaciones y ejercicios de: cadenas, vectores, matrices, conjuntos, listas ligadas, pilas, colas, recursividad, árboles y grafos.
-
 # 📚 Estructura de Datos
 
 Este repositorio contiene implementaciones y ejercicios de **Estructura de Datos**, organizados por temas fundamentales de la materia.  
