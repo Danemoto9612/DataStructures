@@ -1,6 +1,7 @@
 // Main menu
 package daniel.datastructures;
 
+import array.ArrayMenu;
 import java.util.Scanner;
 
 public class MainMenu {
@@ -15,12 +16,12 @@ public class MainMenu {
             System.out.println("----------------------------------------------");
             System.out.println("        D A T A   S T R U C T U R E S");
             System.out.println("----------------------------------------------");
-            System.out.println("0. Exit           1. Array");
-            System.out.println("2. Matrix         3. Set");
-            System.out.println("4. Arraylist      5. Stack");
-            System.out.println("6. Queue          7. Recursion");
-            System.out.println("8. Tree           9. Graph");
-            System.out.println("10. Record        11. LinkedList");
+            System.out.println("0. Exit                               1. Array");
+            System.out.println("2. Matrix                             3. Set  ");
+            System.out.println("4. Arraylist                          5. Stack");
+            System.out.println("6. Queue                              7. Recursion");
+            System.out.println("8. Tree                               9. Graph");
+            System.out.println("10. Record                            11. LinkedList");
             System.out.println("----------------------------------------------");
             System.out.print("Enter option: ");
             option = sc.nextLine();
@@ -32,6 +33,7 @@ public class MainMenu {
                     break;
                 }
                 case "1" -> {
+                    ArrayMenu.operationsMenu();
                 }
                 case "2" -> {
                 }
