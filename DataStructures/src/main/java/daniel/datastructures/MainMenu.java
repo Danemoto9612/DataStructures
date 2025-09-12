@@ -20,6 +20,7 @@ public class MainMenu {
             System.out.println("4. Arraylist      5. Stack");
             System.out.println("6. Queue          7. Recursion");
             System.out.println("8. Tree           9. Graph");
+            System.out.println("10. Record        11. LinkedList");
             System.out.println("----------------------------------------------");
             System.out.print("Enter option: ");
             option = sc.nextLine();
@@ -49,6 +50,10 @@ public class MainMenu {
                 case "9" -> {
                 }
                 case "10" -> {
+                }
+                case "11" -> {
+                }
+                case "12" -> {
                     System.out.println("----------------------------------------------");
                     System.out.println("           CREATED BY D4N13L M0R4L35");
                     break;
