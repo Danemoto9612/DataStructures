@@ -3,6 +3,7 @@ package daniel.datastructures;
 
 import array.ArrayMenu;
 import java.util.Scanner;
+import linkedlist.LinkedListMenu;
 import matrix.MatrixMenu;
 import record.RecordMenu;
 
@@ -59,6 +60,7 @@ public class MainMenu {
                     RecordMenu.operationsMenu();
                 }
                 case "11" -> {
+                    LinkedListMenu.operationsMenu();
                 }
                 case "12" -> {
                 }

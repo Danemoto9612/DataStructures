@@ -14,7 +14,8 @@ public class RecordMenu {
             System.out.println("                        R E C O R D");
             System.out.println("-----------------------------------------------------------");
             System.out.println("0. Exit                                           1. Return");
-            System.out.println("2. Fill                                           3. Show ");
+            System.out.println("2. Fill                                           3. Show  ");
+            System.out.println("4. Easter");
             System.out.println("-----------------------------------------------------------");
             System.out.print("Enter option: ");
             option = sc.nextLine();
