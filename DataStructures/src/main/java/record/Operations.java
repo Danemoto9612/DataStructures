@@ -18,30 +18,30 @@ public class Operations {
             boolean sw = true;
 
             while (sw) {
-                System.out.println("-----------------------------------------------------------");
+                System.out.println("-----------------------------------------------------------------------------");
                 System.out.print("Enter id: ");
                 datum = sc.nextLine();
                 if (datum.length() > 0 && datum.length() <= 20) {
                     person[lenPerson].id = datum;
                     sw = false;
                 } else {
-                    System.out.println("-----------------------------------------------------------");
-                    System.out.println("You haven't entered id");
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.out.println("                Y O U   H A V E N ' T   E N T E R E D   I D");
                 }
             }
             datum = "";
             sw = true;
 
             while (sw) {
-                System.out.println("-----------------------------------------------------------");
+                System.out.println("-----------------------------------------------------------------------------");
                 System.out.print("Enter name: ");
                 datum = sc.nextLine();
                 if (datum.length() > 0 && datum.length() <= 20) {
                     person[lenPerson].name = datum;
                     sw = false;
                 } else {
-                    System.out.println("-----------------------------------------------------------");
-                    System.out.println("You haven't entered name");
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.out.println("             Y O U   H A V E N ' T   E N T E R E D   N A M E");
                 }
             }
 
@@ -49,15 +49,15 @@ public class Operations {
             sw = true;
 
             while (sw) {
-                System.out.println("-----------------------------------------------------------");
+                System.out.println("-----------------------------------------------------------------------------");
                 System.out.print("Enter lastname: ");
                 datum = sc.nextLine();
                 if (datum.length() > 0 && datum.length() <= 20) {
                     person[lenPerson].lastName = datum;
                     sw = false;
                 } else {
-                    System.out.println("-----------------------------------------------------------");
-                    System.out.println("You haven't entered lastname");
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.out.println("          Y O U   H A V E N ' T   E N T E R E D   L A S T N A M E");
                 }
             }
 
@@ -65,22 +65,22 @@ public class Operations {
             sw = true;
 
             while (sw) {
-                System.out.println("-----------------------------------------------------------");
+                System.out.println("-----------------------------------------------------------------------------");
                 System.out.print("Enter cellphone: ");
                 datum = sc.nextLine();
                 if (datum.length() > 0 && datum.length() <= 20) {
                     person[lenPerson].cellPhone = datum;
                     sw = false;
                 } else {
-                    System.out.println("-----------------------------------------------------------");
-                    System.out.println("You haven't entered cellphone");
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.out.println("         Y O U   H A V E N ' T   E N T E R E D   C E L L P H O N E");
                 }
             }
 
             lenPerson++;
         } else {
-            System.out.println("-----------------------------------------------------------");
-            System.out.println("No more records can be entered");
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.println("          N O   M O R E   R E C O R D   C A N   B E   E N T E R E D");
         }
     }
 
@@ -99,8 +99,8 @@ public class Operations {
             }
             System.out.println("+-----+----------+-----------+--------+----------+");
         } else {
-            System.out.println("-----------------------------------------------------------");
-            System.out.println("The record haven't data");
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.println("               T H E   R E C O R D   H A S E N ' T   D A T A");
         }
     }
 

@@ -16,19 +16,19 @@ public class Operations {
         // Pedir tamaño del vector y verificar que sea un tamaño y tipo válido.
         while (sw) {
             try {
-                System.out.println("-----------------------------------------------------------");
+                System.out.println("-----------------------------------------------------------------------------");
                 System.out.print("Enter vector length: ");
                 lenVector = sc.nextInt();
                 sc.nextLine();
                 if (lenVector > 0 && lenVector < 20) {
                     sw = false;
                 } else {
-                    System.out.println("-----------------------------------------------------------");
-                    System.out.println("           S I Z E   V E C T O R   L E S S   2 0");
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.out.println("                  S I Z E   V E C T O R   L E S S   2 0");
                 }
             } catch (Exception e) {
-                System.out.println("-----------------------------------------------------------");
-                System.out.println("                  I N V A L I D   T Y P E");
+                System.out.println("-----------------------------------------------------------------------------");
+                System.out.println("                         I N V A L I D   T Y P E");
                 sc.nextLine();
             }
         }
@@ -44,15 +44,15 @@ public class Operations {
         // Verificar que el vector tenga datos antes de mostrar
         if (lenVector > 0) {
             // Bucle para mostrar el vector separado por "|"
-            System.out.println("-----------------------------------------------------------");
+            System.out.println("-----------------------------------------------------------------------------");
             System.out.print("Vector: |");
             for (int i = 0; i < lenVector; i++) {
                 System.out.print(vector[i] + "|");
             }
             System.out.println();
         } else {
-            System.out.println("-----------------------------------------------------------");
-            System.out.println("Vector don't have data");
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.println("                   V E C T O R   H A S N ' T   D A T A");
         }
     }
 
@@ -67,14 +67,14 @@ public class Operations {
             // Pedir y verificar tipo válido
             while (sw) {
                 try {
-                    System.out.println("-----------------------------------------------------------");
+                    System.out.println("-----------------------------------------------------------------------------");
                     System.out.print("Enter search number: ");
                     search = sc.nextInt();
                     sc.nextLine();
                     sw = false;
                 } catch (Exception e) {
-                    System.out.println("-----------------------------------------------------------");
-                    System.out.println("                 I N V A L I D   T Y P E");
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.out.println("                         I N V A L I D   T Y P E");
                     sc.nextLine();
                 }
             }
@@ -88,15 +88,15 @@ public class Operations {
 
             // Definir si el dato existe o no
             if (index >= 0) {
-                System.out.println("-----------------------------------------------------------");
+                System.out.println("-----------------------------------------------------------------------------");
                 System.out.println("|Datum: [" + search + "] index: [" + index + "]|");
             } else {
-                System.out.println("-----------------------------------------------------------");
-                System.out.println("Datum don't exist");
+                System.out.println("-----------------------------------------------------------------------------");
+                System.out.println("                   D A T A   D O E S N ' T   E X I S T");
             }
         } else {
-            System.out.println("-----------------------------------------------------------");
-            System.out.println("Vector don't have data");
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.println("                   V E C T O R   H A S N ' T   D A T A");
         }
     }
 
@@ -111,14 +111,14 @@ public class Operations {
             // Pedir y verificar tipo válido
             while (sw) {
                 try {
-                    System.out.println("-----------------------------------------------------------");
+                    System.out.println("-----------------------------------------------------------------------------");
                     System.out.print("Enter search number: ");
                     search = sc.nextInt();
                     sc.nextLine();
                     sw = false;
                 } catch (Exception e) {
-                    System.out.println("-----------------------------------------------------------");
-                    System.out.println("                  I N V A L I D   T Y P E");
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.out.println("                         I N V A L I D   T Y P E");
                     sc.nextLine();
                 }
             }
@@ -132,19 +132,19 @@ public class Operations {
 
             // Definir si el dato existe o no y agregar nuevo dato
             if (index >= 0) {
-                System.out.println("-----------------------------------------------------------");
+                System.out.println("-----------------------------------------------------------------------------");
                 System.out.print("Enter new number: ");
                 vector[index] = sc.nextInt();
                 sc.nextLine();
-                System.out.println("-----------------------------------------------------------");
-                System.out.println("New number add");
+                System.out.println("-----------------------------------------------------------------------------");
+                System.out.println("                        N E W   N U M B E R   A D D");
             } else {
-                System.out.println("-----------------------------------------------------------");
-                System.out.println("Datum don't exist");
+                System.out.println("-----------------------------------------------------------------------------");
+                System.out.println("                   D A T A   D O E S N ' T   E X I S T");
             }
         } else {
-            System.out.println("-----------------------------------------------------------");
-            System.out.println("Vector don't have data");
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.println("                   V E C T O R   H A S N ' T   D A T A");
         }
     }
 
@@ -159,14 +159,14 @@ public class Operations {
             // Pedir y verificar tipo válido
             while (sw) {
                 try {
-                    System.out.println("-----------------------------------------------------------");
+                    System.out.println("-----------------------------------------------------------------------------");
                     System.out.print("Enter insert number: ");
                     search = sc.nextInt();
                     sc.nextLine();
                     sw = false;
                 } catch (Exception e) {
-                    System.out.println("-----------------------------------------------------------");
-                    System.out.println("                  I N V A L I D   T Y P E");
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.out.println("                         I N V A L I D   T Y P E");
                     sc.nextLine();
                 }
             }
@@ -183,20 +183,20 @@ public class Operations {
                 for (int i = lenVector; i > index; i--) {
                     vector[i] = vector[i - 1];
                 }
-                System.out.println("-----------------------------------------------------------");
+                System.out.println("-----------------------------------------------------------------------------");
                 System.out.print("Enter new number: ");
                 vector[index] = sc.nextInt();
                 sc.nextLine();
-                System.out.println("-----------------------------------------------------------");
-                System.out.println("New number insert");
+                System.out.println("-----------------------------------------------------------------------------");
+                System.out.println("                     N E W   N U M B E R   I N S E R T");
                 lenVector++;
             } else {
-                System.out.println("-----------------------------------------------------------");
-                System.out.println("Datum don't exist");
+                System.out.println("-----------------------------------------------------------------------------");
+                System.out.println("                   D A T A   D O E S N ' T   E X I S T");
             }
         } else {
-            System.out.println("-----------------------------------------------------------");
-            System.out.println("Vector don't have data");
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.println("                   V E C T O R   H A S N ' T   D A T A");
         }
     }
 
@@ -211,14 +211,14 @@ public class Operations {
             // Pedir y verificar tipo válido
             while (sw) {
                 try {
-                    System.out.println("-----------------------------------------------------------");
+                    System.out.println("-----------------------------------------------------------------------------");
                     System.out.print("Enter delete number: ");
                     search = sc.nextInt();
                     sc.nextLine();
                     sw = false;
                 } catch (Exception e) {
-                    System.out.println("-----------------------------------------------------------");
-                    System.out.println("                 I N V A L I D   T Y P E");
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.out.println("                         I N V A L I D   T Y P E");
                     sc.nextLine();
                 }
             }
@@ -235,16 +235,16 @@ public class Operations {
                 for (int i = index; i < lenVector - 1; i++) {
                     vector[i] = vector[i + 1];
                 }
-                System.out.println("-----------------------------------------------------------");
-                System.out.println("Delete number");
+                System.out.println("-----------------------------------------------------------------------------");
+                System.out.println("                        D E L E T E   N U M B E R");
                 lenVector--;
             } else {
-                System.out.println("-----------------------------------------------------------");
-                System.out.println("Datum don't exist");
+                System.out.println("-----------------------------------------------------------------------------");
+                System.out.println("                   D A T A   D O E S N ' T   E X I S T");
             }
         } else {
-            System.out.println("-----------------------------------------------------------");
-            System.out.println("Vector don't have data");
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.println("                   V E C T O R   H A S N ' T   D A T A");
         }
     }
 
@@ -281,8 +281,8 @@ public class Operations {
                 }
             }
         } else {
-            System.out.println("-----------------------------------------------------------");
-            System.out.println("Vector don't have data");
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.println("                   V E C T O R   H A S N ' T   D A T A");
         }
     }
 
@@ -292,16 +292,16 @@ public class Operations {
         String datum = "";
 
         while (sw) {
-            System.out.println("-----------------------------------------------------------");
-            System.out.println("1. Ascending                                  2. Descending");
-            System.out.println("-----------------------------------------------------------");
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.println("1. Ascending                                                    2. Descending");
+            System.out.println("-----------------------------------------------------------------------------");
             System.out.print("Enter option: ");
             datum = sc.nextLine();
             if (datum.equals("1") || datum.equals("2")) {
                 sw = false;
             } else {
-                System.out.println("-----------------------------------------------------------");
-                System.out.println("Enter 1 or 2");
+                System.out.println("-----------------------------------------------------------------------------");
+                System.out.println("                        E N T E R   1   O R   2");
             }
         }
         return datum;
