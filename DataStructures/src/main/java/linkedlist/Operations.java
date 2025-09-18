@@ -4,12 +4,7 @@ import java.util.Scanner;
 
 public class Operations {
 
-    static Node head;
-
-    public Operations() {
-
-        head = null;
-    }
+    static Node head = null;
 
     static Scanner sc = new Scanner(System.in);
 
@@ -19,6 +14,7 @@ public class Operations {
         boolean sw = true;
 
         while (sw) {
+
             try {
                 System.out.println("-----------------------------------------------------------------------------");
                 System.out.print(text + ": ");
@@ -54,6 +50,7 @@ public class Operations {
             Node p = head;
 
             while (p != null) {
+
                 System.out.println("-----------------------------------------------------------------------------");
                 System.out.println("Dato: " + p.info);
                 System.out.println("Dirección: " + p);
@@ -69,13 +66,14 @@ public class Operations {
     public static void searchNode() {
 
         if (head != null) {
-            
+
             boolean sw = true;
             Node searcher = head;
-            
+
             int datum = returnNumber("Enter number");
-            
+
             while (searcher != null && sw) {
+
                 if (searcher.info == datum) {
                     System.out.println("-----------------------------------------------------------------------------");
                     System.out.println("Number: " + searcher.info);
@@ -85,7 +83,7 @@ public class Operations {
                     searcher = searcher.link;
                 }
             }
-            
+
             if (sw) {
                 System.out.println("-----------------------------------------------------------------------------");
                 System.out.println("                   N O D E   D O E S N ' T   E X I S T");
@@ -100,6 +98,29 @@ public class Operations {
 
         if (head != null) {
 
+            Node searcher = head;
+            int datum;
+            boolean sw = true;
+
+            datum = returnNumber("Enter number");
+
+            while (searcher != null && sw) {
+
+                if (searcher.info == datum) {
+                    int newDatum = returnNumber("Enter new number");
+                    searcher.info = newDatum;
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.out.println("                D A T A   H A S   B E E N   M O D I F I E D");
+                    sw = false;
+                } else {
+                    searcher = searcher.link;
+                }
+            }
+
+            if (sw) {
+                System.out.println("-----------------------------------------------------------------------------");
+                System.out.println("              D A T A   H A S N ' T   B E E N   M O D I F I E D");
+            }
         } else {
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("            T H E R E ' R E   N O   N O D E S   C R E A T E D");
@@ -110,6 +131,37 @@ public class Operations {
 
         if (head != null) {
 
+            int datum;
+            boolean sw = true;
+            Node next = head.link;
+            Node behind = head;
+
+            datum = returnNumber("Enter number");
+
+            if (head.info == datum) {
+                System.out.println("-----------------------------------------------------------------------------");
+                System.out.println("                 D A T A   H A S   B E E N   D E L E T E D");
+                head = head.link;
+            } else {
+
+                while (next != null && sw) {
+
+                    if (next.info == datum) {
+                        behind.link = next.link;
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("                 D A T A   H A S   B E E N   D E L E T E D");
+                        sw = false;
+                    } else {
+                        behind = next;
+                        next = next.link;
+                    }
+                }
+            }
+
+            if (sw) {
+                System.out.println("-----------------------------------------------------------------------------");
+                System.out.println("              D A T A   H A S N ' T   B E E N   D E L E T E D");
+            }
         } else {
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("            T H E R E ' R E   N O   N O D E S   C R E A T E D");
