@@ -14,11 +14,11 @@ public class LinkedListMenu {
             System.out.println("                           L I N K E D   L I S T");
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("0. Exit                                                     1. Return");
-            System.out.println("2. Fill                                                     3. Show ");
+            System.out.println("2. Fill start                                               3. Show ");
             System.out.println("4. Seach                                                    5. Modify");
             System.out.println("6. Delete                                                   7. Insert before");
             System.out.println("8. Insert after                                             9. Search largest");
-            System.out.println("10. Search smallest                                         11. Easter");
+            System.out.println("10. Search smallest                                         11. Fill end");
             System.out.println("-----------------------------------------------------------------------------");
             System.out.print("Enter option: ");
             option = sc.nextLine();
@@ -35,7 +35,7 @@ public class LinkedListMenu {
                     break;
                 }
                 case "2" -> {
-                    Operations.createdNewNode();
+                    Operations.createNewNode();
                 }
                 case "3" -> {
                     Operations.showNodes();
@@ -62,6 +62,9 @@ public class LinkedListMenu {
                     Operations.searchSmallestNode();
                 }
                 case "11" -> {
+                    Operations.createNewNodeEnd();
+                }
+                case "12" -> {
                     System.out.println("-----------------------------------------------------------------------------");
                     System.out.println("                        CREATED BY D4N13L M0R4L35");
                     break;
