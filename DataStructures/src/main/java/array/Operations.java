@@ -87,7 +87,7 @@ public class Operations {
             }
 
             // Definir si el dato existe o no
-            if (index >= 0) {
+            if (index > -1) {
                 System.out.println("-----------------------------------------------------------------------------");
                 System.out.println("|Datum: [" + search + "] index: [" + index + "]|");
             } else {
