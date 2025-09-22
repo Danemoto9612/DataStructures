@@ -6,6 +6,8 @@ import java.util.Scanner;
 import linkedlist.LinkedListMenu;
 import matrix.MatrixMenu;
 import record.RecordMenu;
+import set.SetMenu;
+import string.StringMenu;
 
 public class MainMenu {
 
@@ -43,6 +45,7 @@ public class MainMenu {
                     MatrixMenu.operationsMenu();
                 }
                 case "3" -> {
+                    SetMenu.operationsMenu();
                 }
                 case "4" -> {
                 }
@@ -63,6 +66,7 @@ public class MainMenu {
                     LinkedListMenu.operationsMenu();
                 }
                 case "12" -> {
+                    StringMenu.operationsMenu();
                 }
                 case "13" -> {
                     System.out.println("-----------------------------------------------------------------------------");

@@ -12,7 +12,7 @@ public class ArrayMenu {
 
         do {
             System.out.println("-----------------------------------------------------------------------------");
-            System.out.println("                               A R R A Y S");
+            System.out.println("                                 A R R A Y");
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("0. Exit                                                             1. Return");
             System.out.println("2. Fill                                                             3. Show  ");
