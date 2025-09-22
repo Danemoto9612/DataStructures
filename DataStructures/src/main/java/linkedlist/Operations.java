@@ -17,16 +17,19 @@ public class Operations {
         while (sw) {
 
             try {
+
                 System.out.println("-----------------------------------------------------------------------------");
                 System.out.print(text + ": ");
                 number = sc.nextInt();
                 sw = false;
             } catch (Exception e) {
+
                 System.out.println("-----------------------------------------------------------------------------");
                 System.out.println("                         I N V A L I D   T Y P E");
                 sc.nextLine();
             }
         }
+
         sc.nextLine();
         return number;
     }
@@ -41,29 +44,31 @@ public class Operations {
         newNode.info = datum;
 
         newNode.link = head;
-        
+
         if (head == null) {
+            
             queue = newNode;
         }
-        
+
         head = newNode;
     }
 
     public static void createNewNodeEnd() {
-        
+
         int datum = returnNumber("Enter number");
         Node newNode = new Node();
-        
+
         newNode.info = datum;
         newNode.link = null;
-        
+
         if (head == null) {
-            
+
             head = newNode;
         } else {
+            
             queue.link = newNode;
         }
-        
+
         queue = newNode;
     }
 
@@ -82,6 +87,7 @@ public class Operations {
                 p = p.link;
             }
         } else {
+            
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("            T H E R E ' R E   N O   N O D E S   C R E A T E D");
         }
@@ -99,11 +105,13 @@ public class Operations {
             while (searcher != null && sw) {
 
                 if (searcher.info == datum) {
+                    
                     System.out.println("-----------------------------------------------------------------------------");
                     System.out.println("Number: " + searcher.info);
                     System.out.println("Address: " + searcher);
                     sw = false;
                 } else {
+                    
                     searcher = searcher.link;
                 }
             }
@@ -195,29 +203,29 @@ public class Operations {
     public static void insertBeforeNode() {
 
         if (head != null) {
-            
+
             int datum = returnNumber("Enter number");
-            
+
             if (head.info == datum) {
-                
+
                 Node newNode = new Node();
                 datum = returnNumber("Enter new number");
-                
+
                 newNode.info = datum;
                 newNode.link = head;
                 head = newNode;
             } else {
-                
+
                 Node searcher = head.link;
                 Node previous = head;
                 boolean sw = true;
-                
+
                 while (searcher != null && sw) {
-                    
+
                     if (searcher.info == datum) {
-                        
+
                         Node newNode = new Node();
-                        
+
                         datum = returnNumber("Enter new number");
                         newNode.info = datum;
                         previous.link = newNode;

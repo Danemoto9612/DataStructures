@@ -179,7 +179,7 @@ public class Operations {
             }
 
             // Definir si el dato existe o no e insertar nuevo dato en posicion index
-            if (index >= 0) {
+            if (index > -1) {
                 for (int i = lenVector; i > index; i--) {
                     vector[i] = vector[i - 1];
                 }
@@ -231,7 +231,7 @@ public class Operations {
             }
 
             // Definir si el dato existe o no y eliminar dato en posicion index
-            if (index >= 0) {
+            if (index > -1) {
                 for (int i = index; i < lenVector - 1; i++) {
                     vector[i] = vector[i + 1];
                 }
