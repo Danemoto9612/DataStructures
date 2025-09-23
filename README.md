@@ -3,7 +3,6 @@
 Este repositorio contiene implementaciones y ejercicios de **Estructura de Datos**, organizados por temas fundamentales de la materia.  
 Su objetivo es servir como apoyo para el aprendizaje y práctica de algoritmos y estructuras básicas en programación.
 
----
 
 ## Contenido 📂
 
@@ -35,24 +34,20 @@ Su objetivo es servir como apoyo para el aprendizaje y práctica de algoritmos y
    - Representación por listas y matrices de adyacencia.  
    - Algoritmos de recorrido y búsqueda.  
 
----
 
 ## Objetivo 🚀
 
 Reforzar el conocimiento y la práctica en **estructuras de datos** mediante ejemplos claros y organizados, útiles tanto para estudiantes como para entusiastas de la programación.
 
----
 
 ## Tecnologías 🛠
 
 - Lenguaje: *Java*  
 - Entorno: *Apache NetBeans*  
 
----
 
 ## Contribuciones 🤝
 
 Este repositorio está abierto a mejoras y sugerencias.  
 Siéntete libre de abrir *issues* o enviar *pull requests*.  
 
----
