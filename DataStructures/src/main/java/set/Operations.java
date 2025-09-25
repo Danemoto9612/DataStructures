@@ -10,22 +10,14 @@ public class Operations {
     static int[] setTwo = new int[50];
     static int[] setOneC = new int[50];
     static int[] setTwoC = new int[50];
+    static String[] setUniversalC = {"C O N J U N T O   V A C I O"};
+    static int[] setUnion = new int[50];
+    static int[] setIntersection = new int[50];
+    static int[] setTDifference = new int[50];
     static final int[] setUniversal = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
     static int lenSetOne, lenSetTwo;
     static final int lenSetUniversal = setUniversal.length;
     static int number;
-
-    public static int getLenSetOne() {
-        return lenSetOne;
-    }
-
-    public static int getLenSetTwo() {
-        return lenSetTwo;
-    }
-
-    public static int getLenSetUniversal() {
-        return lenSetUniversal;
-    }
 
     public static void addLenSet(String text, String option) {
 
@@ -612,9 +604,147 @@ public class Operations {
     }
 
     public static void modifySet() {
+
+        String option;
+
+        do {
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.println("0. Exit                                                     1. Return");
+            System.out.println("2. Modify set one                                           3. Modify set two");
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.print("Enter option: ");
+            option = sc.nextLine();
+            switch (option) {
+                case "0" -> {
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.out.println("                          S E E   Y O U   L A T E R");
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.exit(0);
+                }
+                case "1" -> {
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.out.println("                <--- <--- <--- R E T U R N <--- <--- <---");
+                    break;
+                }
+                case "2" -> {
+                    if (lenSetOne > 0) {
+
+                        int index = -1;
+
+                        number = returnNumber("Enter number");
+
+                        for (int i = 0; i < lenSetOne; i++) {
+                            if (setOne[i] == number) {
+                                index = i;
+                                break;
+                            }
+                        }
+
+                        if (index > -1) {
+
+                            boolean sw = true;
+
+                            while (true) {
+                                number = returnNumber("Enter new number");
+                                for (int datum : setOne) {
+                                    if (datum == number) {
+                                        sw = false;
+                                        break;
+                                    }
+                                }
+
+                                if (sw) {
+                                    System.out.println("-----------------------------------------------------------------------------");
+                                    System.out.println("                        N E W   N U M B E R   A D D");
+                                    setOne[index] = number;
+                                    break;
+                                } else {
+                                    System.out.println("-----------------------------------------------------------------------------");
+                                    System.out.println("                  D A T A   A L R E A D Y   E X I S T S");
+                                    sw = true;
+                                }
+                            }
+                        } else {
+                            System.out.println("-----------------------------------------------------------------------------");
+                            System.out.println("                   D A T A   D O E S N ' T   E X I S T");
+                        }
+                    } else {
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("                  S E T   O N E   H A S E N ' T   D A T A");
+                    }
+                }
+                case "3" -> {
+                    if (lenSetTwo > 0) {
+
+                        int index = -1;
+
+                        number = returnNumber("Enter number");
+
+                        for (int i = 0; i < lenSetTwo; i++) {
+                            if (setTwo[i] == number) {
+                                index = i;
+                                break;
+                            }
+                        }
+
+                        if (index > -1) {
+
+                            boolean sw = true;
+
+                            while (true) {
+                                number = returnNumber("Enter new number");
+                                for (int datum : setTwo) {
+                                    if (datum == number) {
+                                        sw = false;
+                                        break;
+                                    }
+                                }
+
+                                if (sw) {
+                                    System.out.println("-----------------------------------------------------------------------------");
+                                    System.out.println("                        N E W   N U M B E R   A D D");
+                                    setTwo[index] = number;
+                                    break;
+                                } else {
+                                    System.out.println("-----------------------------------------------------------------------------");
+                                    System.out.println("                  D A T A   A L R E A D Y   E X I S T S");
+                                    sw = true;
+                                }
+                            }
+                        } else {
+                            System.out.println("-----------------------------------------------------------------------------");
+                            System.out.println("                   D A T A   D O E S N ' T   E X I S T");
+                        }
+                    } else {
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("                  S E T   T W O   H A S E N ' T   D A T A");
+                    }
+                }
+                default -> {
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.out.println("                       I N V A L I D   O P T I O N");
+                    break;
+                }
+            }
+        } while (!option.equals("1"));
     }
 
     public static void unionSet() {
+        if (lenSetOne > 0 && lenSetTwo > 0) {
+            for (int i = 0; i < lenSetOne; i++) {
+                setUnion[i] = setOne[i];
+            }
+            
+            int lenSetUnion = setUnion.length;
+            
+            for (int i = lenSetUnion; i < (lenSetOne + lenSetTwo); i++) {
+                for (int datum : setUnion) {
+                    if (datum == setTwo[i]) {
+                        break;
+                    }
+                }
+            }
+        }
     }
 
     public static void intersectionSet() {
