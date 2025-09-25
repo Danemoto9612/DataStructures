@@ -30,16 +30,21 @@ public class Operations {
                 while (sw) {
 
                     try {
+                        
                         System.out.println("-----------------------------------------------------------------------------");
                         System.out.print(text + ": ");
                         lenSetOne = sc.nextInt();
+                        
                         if (lenSetOne > 0 && lenSetOne < 50) {
+                            
                             sw = false;
                         } else {
+                            
                             System.out.println("-----------------------------------------------------------------------------");
                             System.out.println("                          S I Z E   L E S S   5 0");
                         }
                     } catch (Exception e) {
+                        
                         System.out.println("-----------------------------------------------------------------------------");
                         System.out.println("                         I N V A L I D   T Y P E");
                         sc.nextLine();
@@ -55,16 +60,21 @@ public class Operations {
                 while (sw) {
 
                     try {
+                        
                         System.out.println("-----------------------------------------------------------------------------");
                         System.out.print(text + ": ");
                         lenSetTwo = sc.nextInt();
+                        
                         if (lenSetTwo > 0 && lenSetTwo < 50) {
+                            
                             sw = false;
                         } else {
+                            
                             System.out.println("-----------------------------------------------------------------------------");
                             System.out.println("                          S I Z E   L E S S   5 0");
                         }
                     } catch (Exception e) {
+                        
                         System.out.println("-----------------------------------------------------------------------------");
                         System.out.println("                         I N V A L I D   T Y P E");
                         sc.nextLine();
@@ -83,11 +93,13 @@ public class Operations {
         while (sw) {
 
             try {
+                
                 System.out.println("-----------------------------------------------------------------------------");
                 System.out.print(text + ": ");
                 number = sc.nextInt();
                 sw = false;
             } catch (Exception e) {
+                
                 System.out.println("-----------------------------------------------------------------------------");
                 System.out.println("                         I N V A L I D   T Y P E");
                 sc.nextLine();
@@ -109,7 +121,9 @@ public class Operations {
             System.out.println("-----------------------------------------------------------------------------");
             System.out.print("Enter option: ");
             option = sc.nextLine();
+            
             switch (option) {
+                
                 case "0" -> {
 
                     System.out.println("-----------------------------------------------------------------------------");
@@ -129,7 +143,9 @@ public class Operations {
                     for (int i = 0; i < lenSetOne; i++) {
 
                         number = returnNumber("Enter number [" + (i + 1) + "]");
+                        
                         if (i == 0) {
+                            
                             setOne[0] = number;
                         } else {
 
@@ -138,16 +154,19 @@ public class Operations {
                             for (int datum : setOne) {
 
                                 if (datum == number) {
+                                    
                                     sw = false;
                                     break;
                                 }
                             }
 
                             if (!sw) {
+                                
                                 System.out.println("-----------------------------------------------------------------------------");
                                 System.out.println("                  D A T A   A L R E A D Y   E X I S T S");
                                 i--;
                             } else {
+                                
                                 setOne[i] = number;
                             }
                         }
@@ -160,7 +179,9 @@ public class Operations {
                     for (int i = 0; i < lenSetTwo; i++) {
 
                         number = returnNumber("Enter number [" + (i + 1) + "]");
+                        
                         if (i == 0) {
+                            
                             setTwo[0] = number;
                         } else {
 
@@ -169,16 +190,19 @@ public class Operations {
                             for (int datum : setTwo) {
 
                                 if (datum == number) {
+                                    
                                     sw = false;
                                     break;
                                 }
                             }
 
                             if (!sw) {
+                                
                                 System.out.println("-----------------------------------------------------------------------------");
                                 System.out.println("                  D A T A   A L R E A D Y   E X I S T S");
                                 i--;
                             } else {
+                                
                                 setTwo[i] = number;
                             }
                         }
@@ -203,10 +227,12 @@ public class Operations {
             System.out.print("Set one: |");
 
             for (int i = 0; i < lenSetOne; i++) {
+                
                 System.out.print(setOne[i] + "|");
             }
 
             System.out.println();
+            
         } else {
 
             System.out.println("-----------------------------------------------------------------------------");
@@ -219,10 +245,12 @@ public class Operations {
             System.out.print("Set two: |");
 
             for (int i = 0; i < lenSetTwo; i++) {
+                
                 System.out.print(setTwo[i] + "|");
             }
 
             System.out.println();
+            
         } else {
 
             System.out.println("-----------------------------------------------------------------------------");
@@ -233,6 +261,7 @@ public class Operations {
         System.out.print("Set universal: |");
 
         for (int i = 0; i < lenSetUniversal; i++) {
+            
             System.out.print(setUniversal[i] + "|");
         }
 
@@ -244,13 +273,16 @@ public class Operations {
         String option;
 
         do {
+            
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("0. Exit                                                     1. Return");
             System.out.println("2. Insert set one                                           3. Insert set two");
             System.out.println("-----------------------------------------------------------------------------");
             System.out.print("Enter option: ");
             option = sc.nextLine();
+            
             switch (option) {
+                
                 case "0" -> {
 
                     System.out.println("-----------------------------------------------------------------------------");
@@ -284,6 +316,7 @@ public class Operations {
                         if (index > -1) {
 
                             for (int i = lenSetOne; i > index; i--) {
+                                
                                 setOne[i] = setOne[i - 1];
                             }
 
@@ -307,9 +340,11 @@ public class Operations {
                                 }
 
                                 if (!sw) {
+                                    
                                     System.out.println("-----------------------------------------------------------------------------");
                                     System.out.println("                  D A T A   A L R E A D Y   E X I S T S");
                                 } else {
+                                    
                                     System.out.println("-----------------------------------------------------------------------------");
                                     System.out.println("                     N E W   N U M B E R   I N S E R T");
                                     setOne[index] = number;
@@ -318,6 +353,7 @@ public class Operations {
                             }
 
                         } else {
+                            
                             System.out.println("-----------------------------------------------------------------------------");
                             System.out.println("                   D A T A   D O E S N ' T   E X I S T");
                         }
@@ -328,6 +364,7 @@ public class Operations {
                         System.out.println("                                     O R");
                         System.out.println("                  S E T   O N E   H A S E N ' T   D A T A");
                     }
+                    
                     break;
                 }
                 case "3" -> {
@@ -411,13 +448,16 @@ public class Operations {
         String option;
 
         do {
+            
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("0. Exit                                                     1. Return");
             System.out.println("2. Delete set one                                           3. Delete set two");
             System.out.println("-----------------------------------------------------------------------------");
             System.out.print("Enter option: ");
             option = sc.nextLine();
+            
             switch (option) {
+                
                 case "0" -> {
 
                     System.out.println("-----------------------------------------------------------------------------");
@@ -454,10 +494,12 @@ public class Operations {
 
                                 setOne[i] = setOne[i + 1];
                             }
+                            
                             System.out.println("-----------------------------------------------------------------------------");
                             System.out.println("                        D E L E T E   N U M B E R");
                             lenSetOne--;
                         } else {
+                            
                             System.out.println("-----------------------------------------------------------------------------");
                             System.out.println("                   D A T A   D O E S N ' T   E X I S T");
                         }
@@ -471,6 +513,7 @@ public class Operations {
                 case "3" -> {
 
                     if (lenSetTwo > 0) {
+                        
                         int index = -1;
 
                         number = returnNumber("Enter number");
@@ -485,6 +528,7 @@ public class Operations {
                         }
 
                         if (index > -1) {
+                            
                             for (int i = index; i < lenSetTwo - 1; i++) {
 
                                 setTwo[i] = setTwo[i + 1];
@@ -493,6 +537,7 @@ public class Operations {
                             System.out.println("                        D E L E T E   N U M B E R");
                             lenSetTwo--;
                         } else {
+                            
                             System.out.println("-----------------------------------------------------------------------------");
                             System.out.println("                   D A T A   D O E S N ' T   E X I S T");
                         }
@@ -518,20 +563,25 @@ public class Operations {
         String option;
 
         do {
+            
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("0. Exit                                                     1. Return");
             System.out.println("2. Search set one                                           3. Search set two");
             System.out.println("-----------------------------------------------------------------------------");
             System.out.print("Enter option: ");
             option = sc.nextLine();
+            
             switch (option) {
+                
                 case "0" -> {
+                    
                     System.out.println("-----------------------------------------------------------------------------");
                     System.out.println("                          S E E   Y O U   L A T E R");
                     System.out.println("-----------------------------------------------------------------------------");
                     System.exit(0);
                 }
                 case "1" -> {
+                    
                     System.out.println("-----------------------------------------------------------------------------");
                     System.out.println("                <--- <--- <--- R E T U R N <--- <--- <---");
                     break;
@@ -554,9 +604,11 @@ public class Operations {
                         }
 
                         if (index > -1) {
+                            
                             System.out.println("-----------------------------------------------------------------------------");
                             System.out.println("|Datum: [" + number + "] index: [" + index + "]|");
                         } else {
+                            
                             System.out.println("-----------------------------------------------------------------------------");
                             System.out.println("                   D A T A   D O E S N ' T   E X I S T");
                         }
@@ -583,18 +635,22 @@ public class Operations {
                         }
 
                         if (index > -1) {
+                            
                             System.out.println("-----------------------------------------------------------------------------");
                             System.out.println("|Datum: [" + number + "] index: [" + index + "]|");
                         } else {
+                            
                             System.out.println("-----------------------------------------------------------------------------");
                             System.out.println("                   D A T A   D O E S N ' T   E X I S T");
                         }
                     } else {
+                        
                         System.out.println("-----------------------------------------------------------------------------");
                         System.out.println("                  S E T   O N E   H A S E N ' T   D A T A");
                     }
                 }
                 default -> {
+                    
                     System.out.println("-----------------------------------------------------------------------------");
                     System.out.println("                       I N V A L I D   O P T I O N");
                     break;
@@ -608,14 +664,18 @@ public class Operations {
         String option;
 
         do {
+            
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("0. Exit                                                     1. Return");
             System.out.println("2. Modify set one                                           3. Modify set two");
             System.out.println("-----------------------------------------------------------------------------");
             System.out.print("Enter option: ");
             option = sc.nextLine();
+            
             switch (option) {
+                
                 case "0" -> {
+                    
                     System.out.println("-----------------------------------------------------------------------------");
                     System.out.println("                          S E E   Y O U   L A T E R");
                     System.out.println("-----------------------------------------------------------------------------");
@@ -627,6 +687,7 @@ public class Operations {
                     break;
                 }
                 case "2" -> {
+                    
                     if (lenSetOne > 0) {
 
                         int index = -1;
@@ -634,7 +695,9 @@ public class Operations {
                         number = returnNumber("Enter number");
 
                         for (int i = 0; i < lenSetOne; i++) {
+                            
                             if (setOne[i] == number) {
+                                
                                 index = i;
                                 break;
                             }
@@ -645,35 +708,44 @@ public class Operations {
                             boolean sw = true;
 
                             while (true) {
+                                
                                 number = returnNumber("Enter new number");
+                                
                                 for (int datum : setOne) {
+                                    
                                     if (datum == number) {
+                                        
                                         sw = false;
                                         break;
                                     }
                                 }
 
                                 if (sw) {
+                                    
                                     System.out.println("-----------------------------------------------------------------------------");
                                     System.out.println("                        N E W   N U M B E R   A D D");
                                     setOne[index] = number;
                                     break;
                                 } else {
+                                    
                                     System.out.println("-----------------------------------------------------------------------------");
                                     System.out.println("                  D A T A   A L R E A D Y   E X I S T S");
                                     sw = true;
                                 }
                             }
                         } else {
+                            
                             System.out.println("-----------------------------------------------------------------------------");
                             System.out.println("                   D A T A   D O E S N ' T   E X I S T");
                         }
                     } else {
+                        
                         System.out.println("-----------------------------------------------------------------------------");
                         System.out.println("                  S E T   O N E   H A S E N ' T   D A T A");
                     }
                 }
                 case "3" -> {
+                    
                     if (lenSetTwo > 0) {
 
                         int index = -1;
@@ -681,7 +753,9 @@ public class Operations {
                         number = returnNumber("Enter number");
 
                         for (int i = 0; i < lenSetTwo; i++) {
+                            
                             if (setTwo[i] == number) {
+                                
                                 index = i;
                                 break;
                             }
@@ -692,54 +766,70 @@ public class Operations {
                             boolean sw = true;
 
                             while (true) {
+                                
                                 number = returnNumber("Enter new number");
+                                
                                 for (int datum : setTwo) {
+                                    
                                     if (datum == number) {
+                                        
                                         sw = false;
                                         break;
                                     }
                                 }
 
                                 if (sw) {
+                                    
                                     System.out.println("-----------------------------------------------------------------------------");
                                     System.out.println("                        N E W   N U M B E R   A D D");
                                     setTwo[index] = number;
                                     break;
                                 } else {
+                                    
                                     System.out.println("-----------------------------------------------------------------------------");
                                     System.out.println("                  D A T A   A L R E A D Y   E X I S T S");
                                     sw = true;
                                 }
                             }
                         } else {
+                            
                             System.out.println("-----------------------------------------------------------------------------");
                             System.out.println("                   D A T A   D O E S N ' T   E X I S T");
                         }
                     } else {
+                        
                         System.out.println("-----------------------------------------------------------------------------");
                         System.out.println("                  S E T   T W O   H A S E N ' T   D A T A");
                     }
                 }
                 default -> {
+                    
                     System.out.println("-----------------------------------------------------------------------------");
                     System.out.println("                       I N V A L I D   O P T I O N");
                     break;
                 }
             }
+            
         } while (!option.equals("1"));
     }
 
     public static void unionSet() {
+        
         if (lenSetOne > 0 && lenSetTwo > 0) {
+            
             for (int i = 0; i < lenSetOne; i++) {
+                
                 setUnion[i] = setOne[i];
             }
             
             int lenSetUnion = setUnion.length;
             
             for (int i = lenSetUnion; i < (lenSetOne + lenSetTwo); i++) {
+                
                 for (int datum : setUnion) {
+                    
                     if (datum == setTwo[i]) {
+                        
                         break;
                     }
                 }
@@ -755,5 +845,4 @@ public class Operations {
 
     public static void complementSet() {
     }
-
 }

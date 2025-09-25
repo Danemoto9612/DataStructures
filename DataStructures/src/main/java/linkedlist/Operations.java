@@ -117,10 +117,12 @@ public class Operations {
             }
 
             if (sw) {
+                
                 System.out.println("-----------------------------------------------------------------------------");
                 System.out.println("                   N O D E   D O E S N ' T   E X I S T");
             }
         } else {
+            
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("            T H E R E ' R E   N O   N O D E S   C R E A T E D");
         }
@@ -139,21 +141,25 @@ public class Operations {
             while (searcher != null && sw) {
 
                 if (searcher.info == datum) {
+                    
                     int newDatum = returnNumber("Enter new number");
                     searcher.info = newDatum;
                     System.out.println("-----------------------------------------------------------------------------");
                     System.out.println("                D A T A   H A S   B E E N   M O D I F I E D");
                     sw = false;
                 } else {
+                    
                     searcher = searcher.link;
                 }
             }
 
             if (sw) {
+                
                 System.out.println("-----------------------------------------------------------------------------");
                 System.out.println("              D A T A   H A S N ' T   B E E N   M O D I F I E D");
             }
         } else {
+            
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("            T H E R E ' R E   N O   N O D E S   C R E A T E D");
         }
@@ -171,6 +177,7 @@ public class Operations {
             datum = returnNumber("Enter number");
 
             if (head.info == datum) {
+                
                 System.out.println("-----------------------------------------------------------------------------");
                 System.out.println("                 D A T A   H A S   B E E N   D E L E T E D");
                 head = head.link;
@@ -179,11 +186,13 @@ public class Operations {
                 while (next != null && sw) {
 
                     if (next.info == datum) {
+                        
                         behind.link = next.link;
                         System.out.println("-----------------------------------------------------------------------------");
                         System.out.println("                 D A T A   H A S   B E E N   D E L E T E D");
                         sw = false;
                     } else {
+                        
                         behind = next;
                         next = next.link;
                     }
@@ -191,10 +200,12 @@ public class Operations {
             }
 
             if (sw) {
+                
                 System.out.println("-----------------------------------------------------------------------------");
                 System.out.println("              D A T A   H A S N ' T   B E E N   D E L E T E D");
             }
         } else {
+            
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("            T H E R E ' R E   N O   N O D E S   C R E A T E D");
         }
@@ -231,12 +242,14 @@ public class Operations {
                         previous.link = newNode;
                         newNode.link = searcher;
                     } else {
+                        
                         searcher = searcher.link;
                         previous = previous.link;
                     }
                 }
             }
         } else {
+            
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("            T H E R E ' R E   N O   N O D E S   C R E A T E D");
         }
@@ -265,15 +278,18 @@ public class Operations {
                     System.out.println("                D A T A   H A S   B E E N   I N S E R T E D");
                     sw = false;
                 } else {
+                    
                     searcher = searcher.link;
                 }
             }
 
             if (sw) {
+                
                 System.out.println("-----------------------------------------------------------------------------");
                 System.out.println("             D A T A   H A S N ' T   B E E N   I N S E R T E D");
             }
         } else {
+            
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("            T H E R E ' R E   N O   N O D E S   C R E A T E D");
         }
@@ -301,6 +317,7 @@ public class Operations {
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("Largest Node: " + largest);
         } else {
+            
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("            T H E R E ' R E   N O   N O D E S   C R E A T E D");
         }
@@ -328,9 +345,9 @@ public class Operations {
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("Largest Node: " + smallest);
         } else {
+            
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("            T H E R E ' R E   N O   N O D E S   C R E A T E D");
         }
     }
-
 }

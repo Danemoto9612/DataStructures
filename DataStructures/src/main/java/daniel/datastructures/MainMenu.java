@@ -16,8 +16,10 @@ public class MainMenu {
     static String option;
 
     public static void structuresMenu() {
-
+        
+        // Ciclo para controlar el menú principal de acceso a las demás clases con sus operaciones
         do {
+            
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("                     D A T A   S T R U C T U R E S");
             System.out.println("-----------------------------------------------------------------------------");
@@ -31,54 +33,84 @@ public class MainMenu {
             System.out.println("-----------------------------------------------------------------------------");
             System.out.print("Enter option: ");
             option = sc.nextLine();
+            
             switch (option) {
+                
                 case "0" -> {
+                    
                     System.out.println("-----------------------------------------------------------------------------");
                     System.out.println("                          S E E   Y O U   L A T E R");
                     System.out.println("-----------------------------------------------------------------------------");
                     break;
                 }
                 case "1" -> {
+                    
                     ArrayMenu.operationsMenu();
+                    break;
                 }
                 case "2" -> {
+                    
                     MatrixMenu.operationsMenu();
+                    break;
                 }
                 case "3" -> {
+                    
                     SetMenu.operationsMenu();
+                    break;
                 }
                 case "4" -> {
+                    
+                    break;
                 }
                 case "5" -> {
+                    
+                    break;
                 }
                 case "6" -> {
+                    
+                    break;
                 }
                 case "7" -> {
+                    
+                    break;
                 }
                 case "8" -> {
+                    
+                    break;
                 }
                 case "9" -> {
+                    
+                    break;
                 }
                 case "10" -> {
+                    
                     RecordMenu.operationsMenu();
+                    break;
                 }
                 case "11" -> {
+                    
                     LinkedListMenu.operationsMenu();
+                    break;
                 }
                 case "12" -> {
+                    
                     StringMenu.operationsMenu();
+                    break;
                 }
                 case "13" -> {
+                    
                     System.out.println("-----------------------------------------------------------------------------");
                     System.out.println("                        CREATED BY D4N13L M0R4L35");
                     break;
                 }
                 default -> {
+                    
                     System.out.println("-----------------------------------------------------------------------------");
                     System.out.println("                       I N V A L I D   O P T I O N");
                     break;
                 }
             }
+            
         } while (!option.equals("0"));
     }
 }

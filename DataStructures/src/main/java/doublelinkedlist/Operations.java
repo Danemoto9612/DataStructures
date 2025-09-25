@@ -28,5 +28,4 @@ public class Operations {
     public static void searchLargestNode() {}
     
     public static void searchSmallestNode() {}
-    
 }

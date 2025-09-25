@@ -14,6 +14,5 @@ public class Operations {
     
     public static void lowerString() {}
     
-    public static void deleteString() {}
-    
+    public static void deleteString() {} 
 }

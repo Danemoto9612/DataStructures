@@ -11,6 +11,7 @@ public class MatrixMenu {
     public static void operationsMenu() {
 
         do {
+            
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("                                M A T R I X");
             System.out.println("-----------------------------------------------------------------------------");
@@ -26,71 +27,106 @@ public class MatrixMenu {
             System.out.println("-----------------------------------------------------------------------------");
             System.out.print("Enter option: ");
             option = sc.nextLine();
+            
             switch (option) {
+                
                 case "0" -> {
+                    
                     System.out.println("-----------------------------------------------------------------------------");
                     System.out.println("                          S E E   Y O U   L A T E R");
                     System.out.println("-----------------------------------------------------------------------------");
                     System.exit(0);
                 }
                 case "1" -> {
+                    
                     System.out.println("-----------------------------------------------------------------------------");
                     System.out.println("                <--- <--- <--- R E T U R N <--- <--- <---");
                     break;
                 }
                 case "2" -> {
+                    
                     Operations.fill();
+                    break;
                 }
                 case "3" -> {
+                    
                     Operations.show();
+                    break;
                 }
                 case "4" -> {
+                    
                     Operations.search();
+                    break;
                 }
                 case "5" -> {
+                    
                     Operations.modify();
+                    break;
                 }
                 case "6" -> {
+                    
                     Operations.insertRaw();
+                    break;
                 }
                 case "7" -> {
+                    
                     Operations.insertColumn();
+                    break;
                 }
                 case "8" -> {
+                    
                     Operations.deleteRaw();
+                    break;
                 }
                 case "9" -> {
+                    
                     Operations.deleteColumn();
+                    break;
                 }
                 case "10" -> {
+                    
                     Operations.printRaw();
+                    break;
                 }
                 case "11" -> {
+                    
                     Operations.printColumn();
+                    break;
                 }
                 case "12" -> {
+                    
                     Operations.printMainDiagonal();
+                    break;
                 }
                 case "13" -> {
+                    
                     Operations.printSecondaryDiagonal();
+                    break;
                 }
                 case "14" -> {
+                    
                     Operations.printUpperTriangle();
+                    break;
                 }
                 case "15" -> {
+                    
                     Operations.printLowerTriangle();
+                    break;
                 }
                 case "16" -> {
+                    
                     System.out.println("-----------------------------------------------------------------------------");
                     System.out.println("                 CREATED BY D4N13L M0R4L35");
                     break;
                 }
                 default -> {
+                    
                     System.out.println("-----------------------------------------------------------------------------");
                     System.out.println("                 I N V A L I D   O P T I O N");
                     break;
                 }
             }
+            
         } while (!option.equals("1"));
     }
 
