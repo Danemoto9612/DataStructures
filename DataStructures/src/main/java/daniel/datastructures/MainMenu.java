@@ -21,7 +21,7 @@ public class MainMenu {
         do {
 
             System.out.println("-----------------------------------------------------------------------------");
-            System.out.println("                     D A T A   S T R U C T U R E S");
+            System.out.println("                        D A T A   S T R U C T U R E S");
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("0. Exit                                                 1. Array");
             System.out.println("2. Matrix                                               3. Set  ");
@@ -38,92 +38,111 @@ public class MainMenu {
             switch (option) {
 
                 case "0" -> {
-
+                    
+                    // Permite salir de programa desde este punto
                     System.out.println("-----------------------------------------------------------------------------");
                     System.out.println("                          S E E   Y O U   L A T E R");
                     System.out.println("-----------------------------------------------------------------------------");
                     break;
                 }
                 case "1" -> {
-
+                    
+                    // Permite entrar al menú de array
                     ArrayMenu.operationsMenu();
                     break;
                 }
                 case "2" -> {
-
+                    
+                    // Permite entrar al menú matrix
                     MatrixMenu.operationsMenu();
                     break;
                 }
                 case "3" -> {
-
+                    
+                    // Permite entrar al menú set
                     SetMenu.operationsMenu();
                     break;
                 }
                 case "4" -> {
-
+                    
+                    // Permite entrar al menú arraylist
                     break;
                 }
                 case "5" -> {
-
+                    
+                    // Permite entrar al menú stack
                     break;
                 }
                 case "6" -> {
-
+                    
+                    // Permite entrar al menú queue
                     break;
                 }
                 case "7" -> {
-
+                    
+                    // Permite entrar al menú recursion
                     break;
                 }
                 case "8" -> {
-
+                    
+                    // Permite entrar al menú tree
                     break;
                 }
                 case "9" -> {
-
+                    
+                    // Permite entrar al menú graph
                     break;
                 }
                 case "10" -> {
 
+                    // Permite entrar al menú record
                     RecordMenu.operationsMenu();
                     break;
                 }
                 case "11" -> {
-
+                    
+                    // Permite entrar al menú linkedlist
                     LinkedListMenu.operationsMenu();
                     break;
                 }
                 case "12" -> {
 
-                    StringMenu.operationsMenu();
+                    // Permite entrar al menú circularlinkedlist
                     break;
                 }
                 case "13" -> {
                     
+                    // Permite entrar al menú doublelinkedlist
                     break;
                 }
                 case "14" -> {
                     
+                    // Permite entrar al menú circulardoublelinkedlist
                     break;
                 }
                 case "15" -> {
                     
+                    // Permite entrar al menú string
+                    StringMenu.operationsMenu();
                     break;
                 }
                 case "16" -> {
-
+                    
+                    // Permite mostrar un huevo de pascua en el programa
                     System.out.println("-----------------------------------------------------------------------------");
                     System.out.println("                        CREATED BY D4N13L M0R4L35");
                     break;
                 }
                 default -> {
 
+                    // Permite mostrarle al usuario que la opción escogida no es válida
                     System.out.println("-----------------------------------------------------------------------------");
                     System.out.println("                       I N V A L I D   O P T I O N");
                     break;
                 }
             }
 
+        // Permite validar si debe continuar el menú de array
         } while (!option.equals("0"));
     }
 }

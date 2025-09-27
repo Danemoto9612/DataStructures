@@ -45,6 +45,7 @@ public class Operations {
 
         newNode.link = head;
 
+        // Verificar que sea el primer nodo y posicione el queue en ese nodo sin moverlo.
         if (head == null) {
             
             queue = newNode;
@@ -56,6 +57,7 @@ public class Operations {
     public static void createNewNodeEnd() {
 
         int datum = returnNumber("Enter number");
+        
         Node newNode = new Node();
 
         newNode.info = datum;
