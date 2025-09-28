@@ -9,6 +9,7 @@ public class Operations {
     static int[] vector = new int[20];
     static int lenVector = 0;
 
+    // LLenar el vector con datos enteros
     public static void fill() {
 
         boolean sw = true;
@@ -46,6 +47,7 @@ public class Operations {
         }
     }
 
+    // Mostrar los datos almecenados en el vector
     public static void show() {
 
         // Verificar que el vector tenga datos antes de mostrar
@@ -67,6 +69,7 @@ public class Operations {
         }
     }
 
+    // Buscar un dato existente en el vector
     public static void search() {
 
         boolean sw = true;
@@ -120,6 +123,7 @@ public class Operations {
         }
     }
 
+    // Modificar un dato existente en el vector
     public static void modify() {
 
         boolean sw = true;
@@ -177,6 +181,7 @@ public class Operations {
         }
     }
 
+    // Insertar un dato en el vector usando otro dato de referencia
     public static void insert() {
 
         boolean sw = true;
@@ -240,6 +245,7 @@ public class Operations {
         }
     }
 
+    // Borrar un dato en el vector
     public static void delete() {
 
         boolean sw = true;
@@ -288,6 +294,7 @@ public class Operations {
         }
     }
 
+    // Ordenar de forma ascendente o descendente el vector
     public static void bubbleSort(String option) {
 
         int auxiliar;
@@ -334,6 +341,7 @@ public class Operations {
         }
     }
 
+    // Seleccionar opción
     public static String chooseOpt() {
 
         boolean sw = true;
