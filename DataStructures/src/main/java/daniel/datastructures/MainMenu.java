@@ -2,6 +2,7 @@
 package daniel.datastructures;
 
 import array.ArrayMenu;
+import circularlinkedlist.CircularLinkedListMenu;
 import java.util.Scanner;
 import linkedlist.LinkedListMenu;
 import matrix.MatrixMenu;
@@ -108,6 +109,7 @@ public class MainMenu {
                 case "12" -> {
 
                     // Permite entrar al menú circularlinkedlist
+                    CircularLinkedListMenu.operationsMenu();
                     break;
                 }
                 case "13" -> {
