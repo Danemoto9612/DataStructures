@@ -2,7 +2,7 @@ package doublelinkedlist;
 
 import java.util.Scanner;
 
-public class LinkedListMenu {
+public class DoubleLinkedListMenu {
 
     static Scanner sc = new Scanner(System.in);
 
@@ -14,7 +14,7 @@ public class LinkedListMenu {
         do {
             
             System.out.println("-----------------------------------------------------------------------------");
-            System.out.println("                           L I N K E D   L I S T");
+            System.out.println("                   D O U B L E   L I N K E D   L I S T");
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("0. Exit                                                     1. Return");
             System.out.println("2. Fill start                                               3. Show ");

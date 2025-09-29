@@ -49,7 +49,7 @@ public class Operations {
 
         // Agregar dato al nuevo nodo
         newNode.info = number;
-        
+
         // Poner el enlace del nuevo nodo al anterior
         newNode.link = head;
 
@@ -74,6 +74,18 @@ public class Operations {
 
         int number = returnNumber("Enter number");
 
+        newNode.info = number;
+        newNode.link = head;
+
+        if (head == null) {
+
+            head = newNode;
+        } else {
+
+            queue.link = newNode;
+        }
+
+        queue = newNode;
     }
 
     // Mostrar los nodos creados
@@ -101,6 +113,197 @@ public class Operations {
             System.out.println("Dato: " + queue.info);
             System.out.println("Dirección: " + queue);
             System.out.println("Liga: " + queue.link);
+        } else {
+
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.println("            T H E R E ' R E   N O   N O D E S   C R E A T E D");
+        }
+    }
+
+    public static void searchNode() {
+
+        if (head != null) {
+
+            Node searcher = head;
+            boolean sw = true;
+
+            int number = returnNumber("Enter number");
+
+            if (searcher.info == number) {
+
+                System.out.println("-----------------------------------------------------------------------------");
+                System.out.println("Number: " + searcher.info);
+                System.out.println("Address: " + searcher);
+            } else {
+
+                searcher = searcher.link;
+
+                while (searcher != head && sw) {
+
+                    if (searcher.info == number) {
+
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("Number: " + searcher.info);
+                        System.out.println("Address: " + searcher);
+                        sw = false;
+                    } else {
+
+                        searcher = searcher.link;
+                    }
+                }
+
+                if (sw) {
+
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.out.println("                   N O D E   D O E S N ' T   E X I S T");
+                }
+            }
+        } else {
+
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.println("            T H E R E ' R E   N O   N O D E S   C R E A T E D");
+        }
+    }
+
+    public static void modifyNode() {
+
+        if (head != null) {
+
+            Node searcher = head;
+            boolean sw = true;
+
+            int number = returnNumber("Enter number");
+
+            if (searcher.info == number) {
+
+                number = returnNumber("Enter new number");
+                searcher.info = number;
+                System.out.println("-----------------------------------------------------------------------------");
+                System.out.println("                D A T A   H A S   B E E N   M O D I F I E D");
+            } else {
+
+                searcher = searcher.link;
+
+                while (searcher != head && sw) {
+
+                    if (searcher.info == number) {
+
+                        number = returnNumber("Enter new number");
+                        searcher.info = number;
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("                D A T A   H A S   B E E N   M O D I F I E D");
+                        sw = false;
+                    } else {
+
+                        searcher = searcher.link;
+                    }
+                }
+
+                if (sw) {
+
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.out.println("                   N O D E   D O E S N ' T   E X I S T");
+                }
+            }
+        } else {
+
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.println("            T H E R E ' R E   N O   N O D E S   C R E A T E D");
+        }
+    }
+
+    public static void deleteNode() {
+
+        if (head != null) {
+
+            Node searcher;
+            Node previous;
+
+            int number = returnNumber("Enter number");
+
+            if (head.info == number) {
+
+                head = head.link;
+                queue.link = head;
+                System.out.println("-----------------------------------------------------------------------------");
+                System.out.println("                 D A T A   H A S   B E E N   D E L E T E D");
+            }
+
+            if (queue.info == number) {
+
+                boolean sw = true;
+                searcher = head.link;
+                previous = head;
+
+                while (searcher != null && sw) {
+
+                    if (searcher.info == number) {
+
+                        queue = previous;
+                        previous = searcher.link;
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("                 D A T A   H A S   B E E N   D E L E T E D");
+                        sw = false;
+                    } else {
+
+                        previous = previous.link;
+                        searcher = searcher.link;
+                    }
+                }
+
+                if (sw) {
+
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.out.println("              D A T A   H A S N ' T   B E E N   D E L E T E D");
+                }
+            } else {
+
+                searcher = head.link;
+                previous = head;
+                boolean sw = true;
+
+                while (searcher != null && sw) {
+
+                    if (searcher.info == number) {
+
+                        previous.link = searcher.link;
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("                 D A T A   H A S   B E E N   D E L E T E D");
+                        sw = false;
+                    } else {
+
+                        previous = previous.link;
+                        searcher = searcher.link;
+                    }
+                }
+
+                if (sw) {
+
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.out.println("              D A T A   H A S N ' T   B E E N   D E L E T E D");
+                }
+            }
+
+        } else {
+
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.println("            T H E R E ' R E   N O   N O D E S   C R E A T E D");
+        }
+    }
+
+    public static void insertBeforeNode() {
+
+        if (head != null) {
+        } else {
+
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.println("            T H E R E ' R E   N O   N O D E S   C R E A T E D");
+        }
+    }
+
+    public static void insertAfterNode() {
+
+        if (head != null) {
         } else {
 
             System.out.println("-----------------------------------------------------------------------------");

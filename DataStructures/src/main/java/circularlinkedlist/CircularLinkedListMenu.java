@@ -58,25 +58,25 @@ public class CircularLinkedListMenu {
                 case "4" -> {
 
                     // Permite buscar un nodo existente
-                    //Operations.searchNode();
+                    Operations.searchNode();
                     break;
                 }
                 case "5" -> {
 
                     // Permite modificar un nodo existente
-                    //linkedlist.Operations.modifyNode();
+                    Operations.modifyNode();
                     break;
                 }
                 case "6" -> {
 
                     // Permite borrar un nodo existente
-                    linkedlist.Operations.deleteNode();
+                    Operations.deleteNode();
                     break;
                 }
                 case "7" -> {
 
                     // Permite insertar un nuevo nodo antes de un nodo existente
-                    linkedlist.Operations.insertBeforeNode();
+                    //linkedlist.Operations.insertBeforeNode();
                     break;
                 }
                 case "8" -> {

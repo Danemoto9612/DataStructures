@@ -5,6 +5,7 @@ import array.ArrayMenu;
 import circularlinkedlist.CircularLinkedListMenu;
 import java.util.Scanner;
 import linkedlist.LinkedListMenu;
+import doublelinkedlist.DoubleLinkedListMenu;
 import matrix.MatrixMenu;
 import record.RecordMenu;
 import set.SetMenu;
@@ -115,6 +116,7 @@ public class MainMenu {
                 case "13" -> {
                     
                     // Permite entrar al menú doublelinkedlist
+                    DoubleLinkedListMenu.operationsMenu();
                     break;
                 }
                 case "14" -> {
