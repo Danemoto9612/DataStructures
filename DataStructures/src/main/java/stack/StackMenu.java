@@ -1,6 +1,70 @@
-
 package stack;
 
+import java.util.Scanner;
+
 public class StackMenu {
-    
+
+    static Scanner sc = new Scanner(System.in);
+
+    static String option;
+
+    public static void operationsMenu() {
+
+        // Ciclo para controlar el menú de acciones de la clase stack
+        do {
+
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.println("                                 S T A C K");
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.println("0. Exit                                                             1. Return");
+            System.out.println("2. Push                                                             3. Unpush");
+            System.out.println("4. Show                                                             5. Easter");
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.print("Enter option: ");
+            option = sc.nextLine();
+
+            switch (option) {
+
+                case "0" -> {
+
+                    // Permite salir de programa desde este punto
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.out.println("                          S E E   Y O U   L A T E R");
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.exit(0);
+                }
+                case "1" -> {
+
+                    // Permite regresar al menú principal
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.out.println("                <--- <--- <--- R E T U R N <--- <--- <---");
+                    break;
+                }
+                case "2" -> {
+                    Operations.pushStack();
+                }
+                case "3" -> {
+                    Operations.unpushStack();
+                }
+                case "4" -> {
+                    Operations.showStack();
+                }
+                case "5" -> {
+
+                    // Permite mostrar un huevo de pascua en el programa
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.out.println("                        CREATED BY D4N13L M0R4L35");
+                    break;
+                }
+                default -> {
+
+                    // Permite mostrarle al usuario que la opción escogida no es válida
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.out.println("                       I N V A L I D   O P T I O N");
+                    break;
+                }
+            }
+        } while (!option.equals("1"));
+    }
+
 }

@@ -76,13 +76,13 @@ public class CircularLinkedListMenu {
                 case "7" -> {
 
                     // Permite insertar un nuevo nodo antes de un nodo existente
-                    //linkedlist.Operations.insertBeforeNode();
+                    Operations.insertBeforeNode();
                     break;
                 }
                 case "8" -> {
 
                     // Permite insertar un nuevo nodo después de un nodo existente
-                    //linkedlist.Operations.insertAfterNode();
+                    Operations.insertAfterNode();
                     break;
                 }
                 case "9" -> {

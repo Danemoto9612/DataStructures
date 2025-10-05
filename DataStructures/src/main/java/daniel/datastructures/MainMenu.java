@@ -9,6 +9,7 @@ import doublelinkedlist.DoubleLinkedListMenu;
 import matrix.MatrixMenu;
 import record.RecordMenu;
 import set.SetMenu;
+import stack.StackMenu;
 import string.StringMenu;
 
 public class MainMenu {
@@ -73,6 +74,7 @@ public class MainMenu {
                 case "5" -> {
                     
                     // Permite entrar al menú stack
+                    StackMenu.operationsMenu();
                     break;
                 }
                 case "6" -> {

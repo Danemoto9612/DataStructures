@@ -10,7 +10,7 @@ public class Operations {
     static Scanner sc = new Scanner(System.in);
 
     // Retornar dato. Sólo para uso interno de la clase
-    public static int returnNumber(String text) {
+    private static int returnNumber(String text) {
 
         int number = 0;
         boolean sw = true;

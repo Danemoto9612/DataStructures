@@ -21,7 +21,7 @@ public class SetMenu {
             System.out.println("4. Search                                                     5. Modify");
             System.out.println("6. Insert                                                     7. Delete");
             System.out.println("8. Union                                                      9. Intersection");
-            System.out.println("10. Difference                                                11 . Complement");
+            System.out.println("10. Difference                                                11. Complement");
             System.out.println("12. Easter");
             System.out.println("-----------------------------------------------------------------------------");
             System.out.print("Enter option: ");
