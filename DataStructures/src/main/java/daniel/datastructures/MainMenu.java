@@ -7,6 +7,7 @@ import java.util.Scanner;
 import linkedlist.LinkedListMenu;
 import doublelinkedlist.DoubleLinkedListMenu;
 import matrix.MatrixMenu;
+import queue.QueueMenu;
 import record.RecordMenu;
 import set.SetMenu;
 import stack.StackMenu;
@@ -79,7 +80,7 @@ public class MainMenu {
                 }
                 case "6" -> {
                     
-                    // Permite entrar al menú queue
+                    QueueMenu.operationsMenu();
                     break;
                 }
                 case "7" -> {

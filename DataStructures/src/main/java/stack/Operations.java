@@ -73,13 +73,14 @@ public class Operations {
 
         if (top > 0) {
 
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.print("Stack: |");
             for (int i = top - 1; i >= 0; i--) {
 
-                System.out.println("---");
-                System.out.println(stack[i]);
+                System.out.print(stack[i] + "|");
             }
 
-            System.out.println("---");
+            System.out.println();
         } else {
 
             System.out.println("-----------------------------------------------------------------------------");
