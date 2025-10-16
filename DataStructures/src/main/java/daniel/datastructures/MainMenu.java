@@ -9,6 +9,7 @@ import doublelinkedlist.DoubleLinkedListMenu;
 import matrix.MatrixMenu;
 import queue.QueueMenu;
 import record.RecordMenu;
+import recursion.RecursionMenu;
 import set.SetMenu;
 import stack.StackMenu;
 import string.StringMenu;
@@ -86,6 +87,7 @@ public class MainMenu {
                 case "7" -> {
                     
                     // Permite entrar al menú recursion
+                    RecursionMenu.operationsMenu();
                     break;
                 }
                 case "8" -> {
