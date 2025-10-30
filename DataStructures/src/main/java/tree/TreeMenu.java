@@ -42,54 +42,110 @@ public class TreeMenu {
                     break;
                 }
                 case "2" -> {
-                    
+
                     Operations.root = new NodeTree();
                     Operations.loadNode(Operations.root);
                     break;
                 }
                 case "3" -> {
-                    
+
                     if (Operations.root != null) {
-                        
+
                         Operations.inorder(Operations.root);
                     } else {
-                        
+
                         System.out.println("-----------------------------------------------------------------------------");
                         System.out.println("                            E M P T Y   T R E E");
                     }
-                    
+
                     System.out.println();
                     break;
                 }
                 case "4" -> {
-                    
+
                     if (Operations.root != null) {
-                        
+
                         Operations.preorder(Operations.root);
                     } else {
-                        
+
                         System.out.println("-----------------------------------------------------------------------------");
                         System.out.println("                            E M P T Y   T R E E");
                     }
-                    
+
                     System.out.println();
                     break;
                 }
                 case "5" -> {
-                    
+
                     if (Operations.root != null) {
-                        
+
                         Operations.postorder(Operations.root);
                     } else {
-                        
+
                         System.out.println("-----------------------------------------------------------------------------");
                         System.out.println("                            E M P T Y   T R E E");
                     }
-                    
+
                     System.out.println();
                     break;
                 }
                 case "6" -> {
+
+                    if (Operations.root != null) {
+
+                        Operations.counterNode(Operations.root);
+                    } else {
+
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("                            E M P T Y   T R E E");
+                    }
+
+                    System.out.println();
+                    break;
+                }
+                case "7" -> {
+
+                    if (Operations.root != null) {
+
+                        Operations.counterLeaves(Operations.root);
+                    } else {
+
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("                            E M P T Y   T R E E");
+                    }
+
+                    System.out.println();
+                    break;
+                }
+                case "8" -> {
+
+                    if (Operations.root != null) {
+
+                        Operations.maxNode(Operations.root);
+                    } else {
+
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("                            E M P T Y   T R E E");
+                    }
+
+                    System.out.println();
+                    break;
+                }
+                case "9" -> {
+
+                    if (Operations.root != null) {
+
+                        Operations.minNode(Operations.root);
+                    } else {
+
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("                            E M P T Y   T R E E");
+                    }
+
+                    System.out.println();
+                    break;
+                }
+                case "10" -> {
 
                     // Permite mostrar un huevo de pascua en el programa
                     System.out.println("-----------------------------------------------------------------------------");

@@ -82,12 +82,16 @@ public class Operations {
             System.out.print(seed.info + ", ");
         }
     }
-    
-    public static void counterNode() {}
-    
-    public static void counterLeaves() {}
-    
-    public static void maxNode() {}
-    
-    public static void minNode() {}
+
+    public static void counterNode(NodeTree seed) {
+    }
+
+    public static void counterLeaves(NodeTree seed) {
+    }
+
+    public static void maxNode(NodeTree seed) {
+    }
+
+    public static void minNode(NodeTree seed) {
+    }
 }
