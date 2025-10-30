@@ -19,7 +19,8 @@ public class TreeMenu {
             System.out.println("2. Load                                                       3. Inorder");
             System.out.println("4. Preorder                                                   5. Postorder");
             System.out.println("6. Count nodes                                                7. Count leaves");
-            System.out.println("8. Max node                                                   9. Min node");
+            System.out.println("8. Count middle nodes                                         9. Max node");
+            System.out.println("10. Min node");
             System.out.println("-----------------------------------------------------------------------------");
             System.out.print("Enter option: ");
             option = sc.nextLine();
@@ -93,7 +94,7 @@ public class TreeMenu {
 
                     if (Operations.root != null) {
 
-                        Operations.counterNode(Operations.root);
+                        System.out.println("Total Nodes: " + Operations.counterNode(Operations.root));
                     } else {
 
                         System.out.println("-----------------------------------------------------------------------------");
@@ -121,7 +122,7 @@ public class TreeMenu {
 
                     if (Operations.root != null) {
 
-                        Operations.maxNode(Operations.root);
+                        System.out.println("Total middle nodes: " + Operations.counterMiddleNode(Operations.root));
                     } else {
 
                         System.out.println("-----------------------------------------------------------------------------");
@@ -135,7 +136,7 @@ public class TreeMenu {
 
                     if (Operations.root != null) {
 
-                        Operations.minNode(Operations.root);
+                        System.out.println("Max node: " + Operations.maxNode(Operations.root));
                     } else {
 
                         System.out.println("-----------------------------------------------------------------------------");
@@ -146,6 +147,20 @@ public class TreeMenu {
                     break;
                 }
                 case "10" -> {
+
+                    if (Operations.root != null) {
+
+                        System.out.println("Min node: " + Operations.minNode(Operations.root));
+                    } else {
+
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("                            E M P T Y   T R E E");
+                    }
+
+                    System.out.println();
+                    break;
+                }
+                case "11" -> {
 
                     // Permite mostrar un huevo de pascua en el programa
                     System.out.println("-----------------------------------------------------------------------------");

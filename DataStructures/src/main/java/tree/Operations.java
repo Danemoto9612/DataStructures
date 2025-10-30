@@ -83,15 +83,75 @@ public class Operations {
         }
     }
 
-    public static void counterNode(NodeTree seed) {
+    public static int counterNode(NodeTree seed) {
+
+        if (seed != null) {
+
+            return 1 + counterNode(seed.lb) + counterNode(seed.rb);
+        } else {
+            return 0;
+        }
     }
 
     public static void counterLeaves(NodeTree seed) {
     }
 
-    public static void maxNode(NodeTree seed) {
+    public static int counterMiddleNode(NodeTree seed) {
+
+        return 0;
     }
 
-    public static void minNode(NodeTree seed) {
+    public static int maxNode(NodeTree seed) {
+
+        int m, mLeft, mRight;
+        m = mLeft = mRight = Integer.MIN_VALUE;
+
+        if (seed != null) {
+
+            if (seed.lb != null) {
+
+                mLeft = maxNode(seed.lb);
+            }
+            if (seed.rb != null) {
+
+                mRight = maxNode(seed.rb);
+            }
+
+            m = mLeft > mRight ? mLeft : mRight;
+
+            if (seed.info > m) {
+
+                m = seed.info;
+            }
+        }
+
+        return m;
+    }
+
+    public static int minNode(NodeTree seed) {
+
+        int m, mLeft, mRight;
+        m = mLeft = mRight = Integer.MAX_VALUE;
+
+        if (seed != null) {
+
+            if (seed.lb != null) {
+
+                mLeft = minNode(seed.lb);
+            }
+            if (seed.rb != null) {
+
+                mRight = minNode(seed.rb);
+            }
+
+            m = mLeft < mRight ? mLeft : mRight;
+
+            if (seed.info < m) {
+
+                m = seed.info;
+            }
+        }
+
+        return m;
     }
 }
