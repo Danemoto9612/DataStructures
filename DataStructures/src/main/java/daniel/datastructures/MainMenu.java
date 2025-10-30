@@ -13,6 +13,7 @@ import recursion.RecursionMenu;
 import set.SetMenu;
 import stack.StackMenu;
 import string.StringMenu;
+import tree.TreeMenu;
 
 public class MainMenu {
 
@@ -93,6 +94,7 @@ public class MainMenu {
                 case "8" -> {
                     
                     // Permite entrar al menú tree
+                    TreeMenu.operationsMenu();
                     break;
                 }
                 case "9" -> {

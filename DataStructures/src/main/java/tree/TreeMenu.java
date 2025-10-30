@@ -15,9 +15,11 @@ public class TreeMenu {
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("                                  T R E E ");
             System.out.println("-----------------------------------------------------------------------------");
-            System.out.println("0. Exit                                                          1. Return");
-            System.out.println("2. Load                                                          3. Inorder");
-            System.out.println("4. Preorder                                                      5. Postorder");
+            System.out.println("0. Exit                                                       1. Return");
+            System.out.println("2. Load                                                       3. Inorder");
+            System.out.println("4. Preorder                                                   5. Postorder");
+            System.out.println("6. Count nodes                                                7. Count leaves");
+            System.out.println("8. Max node                                                   9. Min node");
             System.out.println("-----------------------------------------------------------------------------");
             System.out.print("Enter option: ");
             option = sc.nextLine();
@@ -40,12 +42,52 @@ public class TreeMenu {
                     break;
                 }
                 case "2" -> {
+                    
+                    Operations.root = new NodeTree();
+                    Operations.loadNode(Operations.root);
+                    break;
                 }
                 case "3" -> {
+                    
+                    if (Operations.root != null) {
+                        
+                        Operations.inorder(Operations.root);
+                    } else {
+                        
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("                            E M P T Y   T R E E");
+                    }
+                    
+                    System.out.println();
+                    break;
                 }
                 case "4" -> {
+                    
+                    if (Operations.root != null) {
+                        
+                        Operations.preorder(Operations.root);
+                    } else {
+                        
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("                            E M P T Y   T R E E");
+                    }
+                    
+                    System.out.println();
+                    break;
                 }
                 case "5" -> {
+                    
+                    if (Operations.root != null) {
+                        
+                        Operations.postorder(Operations.root);
+                    } else {
+                        
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("                            E M P T Y   T R E E");
+                    }
+                    
+                    System.out.println();
+                    break;
                 }
                 case "6" -> {
 
