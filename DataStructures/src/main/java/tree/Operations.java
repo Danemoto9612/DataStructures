@@ -154,4 +154,74 @@ public class Operations {
 
         return m;
     }
+
+    public static void treeToArray(NodeTree seed, int[] vec, int[] pos) {
+
+        if (seed != null) {
+
+            vec[pos[0]] = seed.info;
+            pos[0]++;
+            treeToArray(seed.lb, vec, pos);
+            treeToArray(seed.rb, vec, pos);
+        }
+    }
+
+    public static void searchBinary(NodeTree seed, int datum) {
+
+        if (seed != null) {
+
+            if (datum < seed.info) {
+                searchBinary(seed.lb, datum);
+            } else if (datum > seed.info) {
+                searchBinary(seed.rb, datum);
+            } else {
+
+                System.out.println("-----------------------------------------------------------------------------");
+                System.out.println("                   D A T A   E X I S T S   I N   T R E E");
+            }
+        } else {
+
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.println("                    D A T A   D O E S N ' T   E X I S T S");
+        }
+    }
+
+    public static void insertBinary(NodeTree seed, int datum) {
+
+        NodeTree newNode;
+
+        if (datum < seed.info) {
+
+            if (seed.lb == null) {
+
+                newNode = new NodeTree();
+                newNode.info = datum;
+                newNode.lb = null;
+                newNode.rb = null;
+                seed.lb = newNode;
+            } else {
+
+                insertBinary(seed.lb, datum);
+            }
+        } else if (datum > seed.info) {
+
+            if (seed.rb == null) {
+
+                newNode = new NodeTree();
+                newNode.info = datum;
+                newNode.lb = null;
+                newNode.rb = null;
+                seed.rb = newNode;
+            } else {
+                
+                insertBinary(seed.rb, datum);
+            }
+        } else {
+
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.println("                  D A T A   A L R E A D Y   E X I S T S");
+        }
+    }
+    
+    public static void arrayToTree() {}
 }

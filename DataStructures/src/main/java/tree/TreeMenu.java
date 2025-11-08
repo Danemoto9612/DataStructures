@@ -15,12 +15,13 @@ public class TreeMenu {
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("                                  T R E E ");
             System.out.println("-----------------------------------------------------------------------------");
-            System.out.println("0. Exit                                                       1. Return");
-            System.out.println("2. Load                                                       3. Inorder");
-            System.out.println("4. Preorder                                                   5. Postorder");
-            System.out.println("6. Count nodes                                                7. Count leaves");
-            System.out.println("8. Count middle nodes                                         9. Max node");
-            System.out.println("10. Min node");
+            System.out.println("0. Exit                                                     1. Return");
+            System.out.println("2. Load                                                     3. Inorder");
+            System.out.println("4. Preorder                                                 5. Postorder");
+            System.out.println("6. Count nodes                                              7. Count leaves");
+            System.out.println("8. Count middle nodes                                       9. Max node");
+            System.out.println("10. Min node                                                11. Tree to array");
+            System.out.println("12. Search binary                                           13. Insert binary");
             System.out.println("-----------------------------------------------------------------------------");
             System.out.print("Enter option: ");
             option = sc.nextLine();
@@ -161,6 +162,58 @@ public class TreeMenu {
                     break;
                 }
                 case "11" -> {
+
+                    if (Operations.root != null) {
+
+                        int lenVec = Operations.counterNode(Operations.root);
+                        int[] vec = new int[lenVec];
+                        int[] pos = {0};
+                        Operations.treeToArray(Operations.root, vec, pos);
+                        System.out.println("-----------------------------------------------------------------------------");
+                        for (int i = 0; i < lenVec; i++) {
+
+                            System.out.print(vec[i] + "|");
+                        }
+
+                        System.out.println();
+                    } else {
+
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("                            E M P T Y   T R E E");
+                    }
+                    break;
+                }
+                case "12" -> {
+
+                    if (Operations.root != null) {
+
+                        System.out.print("Enter node: ");
+                        int datum = sc.nextInt();
+                        sc.nextLine();
+                        Operations.searchBinary(Operations.root, datum);
+                    } else {
+
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("                            E M P T Y   T R E E");
+                    }
+                    break;
+                }
+                case "13" -> {
+
+                    if (Operations.root != null) {
+
+                        System.out.print("Insert node: ");
+                        int datum = sc.nextInt();
+                        sc.nextLine();
+                        Operations.insertBinary(Operations.root, datum);
+                    } else {
+
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("                            E M P T Y   T R E E");
+                    }
+                    break;
+                }
+                case "14" -> {
 
                     // Permite mostrar un huevo de pascua en el programa
                     System.out.println("-----------------------------------------------------------------------------");
