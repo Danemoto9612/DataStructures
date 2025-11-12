@@ -22,6 +22,7 @@ public class TreeMenu {
             System.out.println("8. Count middle nodes                                       9. Max node");
             System.out.println("10. Min node                                                11. Tree to array");
             System.out.println("12. Search binary                                           13. Insert binary");
+            System.out.println("14. Array to tree");
             System.out.println("-----------------------------------------------------------------------------");
             System.out.print("Enter option: ");
             option = sc.nextLine();
@@ -214,6 +215,20 @@ public class TreeMenu {
                     break;
                 }
                 case "14" -> {
+
+                    if (Operations.root != null) {
+
+                        int[] vec = {10,15,4,3,11,25,1,9,20};
+                        int[] pos = {0};
+                        Operations.arrayToTree(Operations.root, vec, pos);
+                    } else {
+
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("                            E M P T Y   T R E E");
+                    }
+                    break;
+                }
+                case "15" -> {
 
                     // Permite mostrar un huevo de pascua en el programa
                     System.out.println("-----------------------------------------------------------------------------");

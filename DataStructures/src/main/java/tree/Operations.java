@@ -213,7 +213,7 @@ public class Operations {
                 newNode.rb = null;
                 seed.rb = newNode;
             } else {
-                
+
                 insertBinary(seed.rb, datum);
             }
         } else {
@@ -222,7 +222,10 @@ public class Operations {
             System.out.println("                  D A T A   A L R E A D Y   E X I S T S");
         }
     }
-    
-    public static void arrayToTree() {}
-    
+
+    public static void arrayToTree(NodeTree seed, int[] vector, int[] pos) {
+    }
+
+    public static void showLinkedList() {
+    }
 }

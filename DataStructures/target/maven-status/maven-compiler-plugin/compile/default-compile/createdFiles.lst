@@ -6,7 +6,7 @@ circularlinkedlist/CircularLinkedListMenu.class
 circularlinkedlist/Node.class
 recursion/Operations.class
 circulardoublelinkedlist/Node.class
-doublelinkedlist/LinkedListMenu.class
+tree/NodeTree.class
 graph/Operations.class
 record/Person.class
 graph/GraphMenu.class
@@ -21,6 +21,7 @@ arraylist/ArrayListMenu.class
 tree/Operations.class
 doublelinkedlist/Node.class
 matrix/Operations.class
+doublelinkedlist/DoubleLinkedListMenu.class
 circulardoublelinkedlist/CircularLinkedListMenu.class
 doublelinkedlist/Operations.class
 tree/TreeMenu.class
